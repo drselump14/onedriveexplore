@@ -54,6 +54,7 @@ function ensureHttps() {
 function onAuthCallback() {
   var authInfo = getAuthInfoFromUrl();
   var token = authInfo["access_token"];
+  prompt('Please copy this token', token);
   var expiry = parseInt(authInfo["expires_in"]);
   if (token)
   {
